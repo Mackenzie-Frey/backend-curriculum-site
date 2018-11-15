@@ -7,13 +7,19 @@ title: Project Rubrics
 
 <br> | **4: Well Above Expectations** | **3: Meets Expectations** | **2: Below Expectations** | **1: Well Below Expectations**
 -- | --- | --- | --- | ---
-**Functionality** | | Completes iteration 3 | | |
-**Ruby Syntax** | | | | |
-**Ruby Conventions** | | Code is properly indented and spaced. Class, method, and variable names follow convention. Lines of code are less than 80 characters. Implements at least one helper method.| | |
-**Testing** | | Every class has a test suite with tests that accurately verify the expected behavior of the majority of methods. | | |
+**Functionality** | Application is robust and can handle a variety of inputs including invalid inputs and completes iteration 4 | Application adheres to the flow outlined in the specification and can handle a variety of valid inputs implied from the specification. | Application does follow the flow outlined in the specification or can only handle the exact inputs defined in the specification | Iteration 2 is not complete |
+**Ruby Mechanics** | Project includes appropriate uses of hashes and enumerables not covered in class | Appropriately uses Ruby's built in datatypes and methods, flow control, and enumerables. | Does not appropriately use one or two of the following: Ruby's built in datatypes and methods, flow control, and enumerables | Does not appropriately use Ruby's built in datatypes and methods, flow control, and enumerables, or does not build classes |
+**Ruby Conventions** | Classes, methods, and variables are well named so that they clearly communicate their purpose | Code is mostly properly indented, spaced, and lines are not excessively long. Class, method, variable, and file names follow convention | Code demonstrates some proper indenting and spacing. Class, method, variable, and file names inconsistently follow convention | Code is not properly indented and spaced and lines are excessively long. Class, method, variable, and file names do not follow convention |
+**Testing** | | Every method listed in the spec is tested. Tests are mostly written to accurately verified expected behavior. | Every method listed.| |
 **Version Control** | | Code is hosted on master of Github repository. At least 20 commits. At least 1 pull request. | | |
 
 ## Learning Goals
+
+* Follow an interaction pattern
+* Write readable code that adheres to Ruby convention
+* Write tests
+* Create an Object Oriented Solution to a problem (objects should interact to achieve the stated goal)
+* Host code on Github
 
 - [ ] Students will be able to create Classes that utilize instance variables, attribute accessors, and instance methods
 - [ ] Students will be able to create multiple classes that interact
@@ -39,12 +45,18 @@ title: Project Rubrics
 <br> | **4: Well Above Expectations** | **3: Meets Expectations** | **2: Below Expectations** | **1: Well Below Expectations**
 -- | --- | --- | --- | ---
 **Functionality** | | | | |
-**Mechanics** | | | | |
-**Readability** | | | | |
+**Object Oriented Programming** | | | | |
 **Test Driven Development** | | | | |
 **Version Control** | | | | |
 
 ## Learning Goals
+
+* Utilize TDD
+* Practice Algorithmic Thinking
+* Work in a pair
+* Create classes/methods without being given specifications
+* Use Pull Requests to collaborate with a partner
+
 
 Students will be able to create a class without a spec
 
@@ -69,7 +81,20 @@ Students will be able to resolve merge conflicts
 
 ### Week 4 - 5 (Group)
 
+<br> | **4: Well Above Expectations** | **3: Meets Expectations** | **2: Below Expectations** | **1: Well Below Expectations**
+-- | --- | --- | --- | ---
+**Functionality** | | | | |
+**Object Oriented Programming** | | | | |
+**Test Driven Development** | | | | |
+**Version Control** | | | | |
+
 ## Learning Goals
+
+* Use TDD as a design strategy
+* Design an Object Oriented Solution to a problem
+* Practice Algorithmic Thinking
+* Work in a group
+* Use Pull Requests to collaborate among multiple partners
 
 Students will be able to design an Object Oriented solution to a problem
 Students will be able to create a class that inherits from a superclass
@@ -86,4 +111,16 @@ Students will be able to explain the difference between unit and integration tes
 
 ### Week 6 (Independent)
 
+<br> | **4: Well Above Expectations** | **3: Meets Expectations** | **2: Below Expectations** | **1: Well Below Expectations**
+-- | --- | --- | --- | ---
+**Functionality** | | | | |
+**Object Oriented Programming** | | | | |
+**Test Driven Development** | | | | |
+**Version Control** | | | | |
+
 ## Learning Goals
+
+* Use TDD as a design strategy
+* Design an Object Oriented Solution to a problem
+* Practice Algorithmic Thinking
+* Demonstrate proper use of commits and Pull Requests
