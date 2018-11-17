@@ -8,10 +8,8 @@ tags: enumerables, map, select, find, each
 
 * Learn how to use & recreate the functionality of `.map`, `.select` and `.find` using `.each`
 * Understand when to use `.map`, `.select` and `.find` appropriately.
+* Learn how to explore new enumerables using Ruby docs.
 
-## Slides
-
-Available [here](../slides/beginner_enumerables)
 
 ## Vocabulary  
 * enumerable  
@@ -20,13 +18,33 @@ Available [here](../slides/beginner_enumerables)
 * return value
 
 ## Warm Up  
-* What is an **enumerable**? What is a use case for one?  
+* What is **iteration** and when do we use it?
 * In your notebook, write the block of code to use `.each` to print each letter in the following array `dynasty_1 = ["K", "e", "n", "n", "e", "d", "y"]`
+* In your notebook, write the block of code to use `.each` to create an array of the following names, in all caps: `names = ['Jack', 'Bobby', 'Teddy']`
 
 ## Intro
 
-We've already learned how to use each, and we can do some really cool
-things with it, but let's do better.
+Earlier this week, we learned about the method \#each. We used \#each to iterate over a collection to accomplish a variety of tasks: transforming collections, pulling a subset of elements, and creating new things based on some or all of the elements in the collection.  Because iteration is something we do on a nearly daily basis as programmers, Ruby has built some out-of-the-box tools that help us streamline the more common iteration patterns.  These tools are categorized as **enumerables**.  Enumerables are methods that take the base function of \#each and build on it to simplify certain patterns of iteration.
+
+Before we get into the enumerables themselves, let's take a moment to form a strategy for learning all of these new methods.  Enumerables are one of the topics that we will cover that can be cemented in our minds through some simple flashcard exercises and memorization.  There are three key pieces of information that we will want to learn for each enumerable _and_ the method \#each:
+  * syntax
+  * return value
+  * best use-cases
+
+As we walk through some of the more common enumerables, we will be making flashcards for each - you will be able to use these flashcards as study tools to better cement each enumerable in your mind.
+
+Let's start our flashcards with \#each.  The face of your index card should have the method name, \#each.  On the reverse side of the card, write the following information:
+  * syntax:
+    ```ruby
+    collection.each do |element|
+      # the block of code here will run for each element
+    end
+    ```
+  * return value - \#each returns the original array
+  * best use-cases - When iterating over a collection _and_ there is not an Enumerable that specifically accomplishes the goal.
+
+By the end of the lesson, you will have a good stack of Enumerable flashcards that will help you learn when and how to use them as a better option than \#each.
+
 
 ### `map` / `collect`
 
@@ -109,11 +127,13 @@ def kennedy_brothers
 
 end
 ```
-**Annotate**
-Annotate each line of your new code the way the examples above were, to describe exactly what is happening at each line.
+
+**FlashCard**
+
+Its time to create your next flashcard!  Using the same format that we used for \#each, create a flashcard for \#map - including syntax, return value, and use-cases.
 
 **Turn & Talk**  
-Share you code with your neighbor.  Talk them through your annotations - be specific. What is similar/different? Why did you make the choices you made?  
+Share you flashcard with your neighbor.  Talk them through it and be specific. What is similar/different? Are there any changes/additions you want to make to your own flashcard?
 
 
 ### `find` / `detect`
@@ -167,8 +187,12 @@ def find_sisters
   end
 end
 ```
+**FlashCard**
+
+Its time to create your next flashcard!  Using the same format that we used for \#map, create a flashcard for \#find - including syntax, return value, and use-cases.
+
 **Turn & Talk**  
-Share your code with your neighbor.  Talk them through what is happening line by line - be specific. What is similar/different? Why did you make the choices you made?  
+Share you flashcard with your neighbor.  Talk them through it and be specific. What is similar/different? Are there any changes/additions you want to make to your own flashcard?  
 
 ### `find_all` / `select`
 
@@ -206,36 +230,35 @@ def all_the_odds
 end
 ```
 
-**Discuss:** Why is this better?
+**FlashCard**
 
-#### Independent Practice
-Let's grab all of the Kennedy Spouses that start with a "V" using `find_all` rather than `each`:
+Its time to create your next flashcard!  Using the same format that we used for \#find, create a flashcard for \#find_all - including syntax, return value, and use-cases.
 
-```ruby
-def named_v
-  spouses = ["Jacqueline", "William", "Robert", "Peter", "Ethel", "Stephen", "Virginia", "Victoria"]
+**Turn & Talk**  
+Share you flashcard with your neighbor.  Talk them through it and be specific. What is similar/different? Are there any changes/additions you want to make to your own flashcard?
 
-  spouses_starting_v = []
+### Additional Enumerables
 
-  spouses.each do |spouse|
-    if spouse[0] == "V"
-      spouses_starting_v << spouse
-    end
-  end
+Now that we have walked through 3 of the most common Enumerables as a class, its time for you and your partner to do some independent research!  Working with your partner, research the following Enumerables and make flashcards for each based on what you find.  The [Enumerable Ruby docs](https://ruby-doc.org/core-2.4.1/Enumerable.html) will be a great place to start!
 
-end
-```
-
-## Exercises
-Follow the directions on [this README](https://github.com/ameseee/enums_practice) to get some more practice!
+* \#max
+* \#min
+* \#max_by
+* \#min_by
+* \#sort_by
+* \#all?
+* \#any?
+* \#none?
+* \#one?
 
 
 ## Final CFU
 * What do map, find, and select do? What do they return?
-* What makes them preferable to each?   
+* What do max, max_by, their opposites, and sort_by return?
+* What makes an enumerable preferable to each?
+* What does the `?` on the end of a method indicate?  
 
 
-### Homework
-* Continue working on the [Kennedys Practice](https://github.com/ameseee/enums_practice)
-* Work on the `map`, `find`, and `select` exercises for [Enums-Exercises](https://github.com/turingschool/enums-exercises).
-* Work through [Beginner Enumerables](https://github.com/turingschool-examples/beginner_enums/) according to instructions within its README.
+### Additional Practice
+
+[Enums-Exercises](https://github.com/turingschool/enums-exercises).
