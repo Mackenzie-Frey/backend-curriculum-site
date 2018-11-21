@@ -27,16 +27,17 @@ tags: enumerables, map, select, find, each
 Earlier this week, we learned about the method \#each. We used \#each to iterate over a collection to accomplish a variety of tasks: transforming collections, pulling a subset of elements, and creating new things based on some or all of the elements in the collection.  Because iteration is something we do on a nearly daily basis as programmers, Ruby has built some out-of-the-box tools that help us streamline the more common iteration patterns.  These tools are categorized as **enumerables**.  Enumerables are methods that take the base function of \#each and build on it to simplify certain patterns of iteration.
 
 Before we get into the enumerables themselves, let's take a moment to form a strategy for learning all of these new methods.  Enumerables are one of the topics that we will cover that can be cemented in our minds through some simple flashcard exercises and memorization.  There are three key pieces of information that we will want to learn for each enumerable _and_ the method \#each:
+
   * syntax
   * return value
   * best use-cases
 
-As we walk through some of the more common enumerables, we will be making two flashcards for each - you will be able to use these flashcards as study tools to better cement each enumerable in your mind.
+As we walk through some of the more common enumerables, we will be making flashcards for each - you will be able to use these flashcards as study tools to better cement each enumerable in your mind.
 
-Let's start our flashcards with \#each.
+Let's start our flashcards with \#each.  The face of your index card should have the method name, \#each.  On the reverse side of the card, write the following information:
 
-For the first flashcard, the face of your index card should have the method name, \#each.  On the reverse side of the card, write the following information:
   * syntax:
+
     ```ruby
     collection.each do |element|
       # the block of code here will run for each element
