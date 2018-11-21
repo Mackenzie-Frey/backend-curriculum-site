@@ -113,9 +113,7 @@ end
 puts capitazed_names
 ```
 
-Since we know that **each returns the original array** we need to create some placeholder container to store our _new_ collection. You will often hear this placeholder called the **aggregator**, and in this example our aggregator is the collection that `capitalized_names` is pointing to.  You can also think of `capitalized_names` as the aggregator.
-
-The thing to remember is that when you are using \#each, you will almost always use some sort of aggregator or other container to hold the result that you want - in this case, the names capitalized.  Without the placeholder, you will not be able to access the information that you want!
+Since we know that **each returns the original array** we need to create some placeholder container to store our _new_ collection. In Mod 1, you may hear this placeholder called the accumulator or the aggregator. The thing to remember is that when you are using \#each, you will almost always use some sort of placeholder to preserve the result that you want - in this case, the names capitalized.  Without the placeholder, you will not be able to access the information that you want!
 
 ## Get a Subset of a Collection
 
@@ -160,7 +158,7 @@ puts total
 
 Unlike our previous examples, here we can see how \#each can be used to create something other than another collection.  In this case, we are using \#each to collect a running total (or sum) of each of the elements within the original collection, `numbers`.
 
-The examples we have outlined are by no means a complete list of the ways that \#each can be used; they are only illustrations of the types of things you can accomplish with \#each.  As you grown your skills as a programmer, you will find more and more complex uses for \#each and iteration in general.
+The examples we have outlined are by no means a complete list of the ways that \#each can be used; they are only illustrations of the types of things you can accomplish with \#each.  As you grow your skills as a programmer, you will find more and more complex uses for \#each and iteration in general.
 
 ## with_index
 

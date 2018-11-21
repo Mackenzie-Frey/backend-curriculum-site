@@ -19,8 +19,8 @@ tags: enumerables, map, select, find, each
 
 ## Warm Up  
 * What is **iteration** and when do we use it?
-* In your notebook, write the block of code to use `.each` to print each letter in the following array `dynasty_1 = ["K", "e", "n", "n", "e", "d", "y"]`
-* In your notebook, write the block of code to use `.each` to create an array of the following names, in all caps: `names = ['Jack', 'Bobby', 'Teddy']`
+* In your notebook, write the code to that you would use to print each of the letters in this array: `dynasty_1 = ["K", "e", "n", "n", "e", "d", "y"]`.  Write the code so that `dynasty_1` could be replaced with an array of any length.
+* In your notebook, write the code that you would use to create a new array with capitalized versions of the following names.: `names = ['Jack', 'Bobby', 'Teddy']`
 
 ## Intro
 
@@ -31,9 +31,11 @@ Before we get into the enumerables themselves, let's take a moment to form a str
   * return value
   * best use-cases
 
-As we walk through some of the more common enumerables, we will be making flashcards for each - you will be able to use these flashcards as study tools to better cement each enumerable in your mind.
+As we walk through some of the more common enumerables, we will be making two flashcards for each - you will be able to use these flashcards as study tools to better cement each enumerable in your mind.
 
-Let's start our flashcards with \#each.  The face of your index card should have the method name, \#each.  On the reverse side of the card, write the following information:
+Let's start our flashcards with \#each.
+
+For the first flashcard, the face of your index card should have the method name, \#each.  On the reverse side of the card, write the following information:
   * syntax:
     ```ruby
     collection.each do |element|
@@ -43,7 +45,12 @@ Let's start our flashcards with \#each.  The face of your index card should have
   * return value - \#each returns the original array
   * best use-cases - When iterating over a collection _and_ there is not an Enumerable that specifically accomplishes the goal.
 
-By the end of the lesson, you will have a good stack of Enumerable flashcards that will help you learn when and how to use them as a better option than \#each.
+Now, on your second flashcard, the face of your index card should have one or more best use-cases:
+  * I need to iterate over a collection _and_ there is not an Enumerable that specifically accomplishes my goal.
+
+On the back of this second card, you should write the name of the method - \#each.
+
+By the end of the lesson, you will have a good stack of Enumerable flashcards that will help you learn when and how to use them as a better option than \#each.  For each method, the first flashcard (with the method name on the front) will help you learn _how_ to use the method and the second flashcard (with the use-case on the front) will help you learn _when_ to use the method. This second card will most closely mimic the challenges you will face when coding and trying to decide which method to use.
 
 
 ### `map` / `collect`
@@ -52,7 +59,55 @@ By the end of the lesson, you will have a good stack of Enumerable flashcards th
 
 The difference is that `map` actually _returns whatever we do in the block_. Think about how this is different from each which will always return the content of the _original_ array.
 
-Let's look at this in code. Taking an array of the numbers, we want to end up with an array with the doubles of each of those numbers. With `each`, we would do it like this:
+#### Return Values
+
+Let's return to _return values_ for just a moment.  When we were learning about \#each, we learned that \#each will always return the **original array**, and we saw that when we use \#each, we need to use a placeholder to preserve the return value we are looking for, like this:
+
+```ruby
+numbers = [1, 2, 3, 4, 5]
+
+doubles = []
+
+numbers.each do |number|
+  doubles << number * 2
+end
+
+p doubles
+```
+
+Knowing what we do about return values, can you guess what the following code snippet would return? Run the code in a playground.rb file and see if your guess was correct.
+
+```ruby
+def doubles
+  numbers = [1, 2, 3, 4, 5]
+  numbers.each do |number|
+    number * 2
+  end
+end
+
+p doubles
+```
+
+Even when we wrap an \#each block inside a method, we need a placeholder to keep track of the return value that we want.  This is because the return value of a method will generally be the last line of code that is run, and we can consider the \#each block from `do` to `end` as a single line of code.  Remember that each can be written on a single line like this: `numbers.each { |number| number * 2 }`
+
+So, we would want to revise the code above to something like this to get the method to return doubles:
+
+```ruby
+def doubles
+  numbers = [1, 2, 3, 4, 5]
+  result = []
+  numbers.each do |number|
+    result << number * 2
+  end
+  result
+end
+```
+
+Now, our last line of code is `result` instead of the \#each block, and the method will return what we expect.
+
+Ok, now that we have refreshed ourselves on return values, let's get back to \#map!
+
+First, let's look at the example we used above - taking an array of the numbers, we want to end up with an array with the doubles of each of those numbers. With `each`, we would do it like this:
 
 ```ruby
 def double                    # define a method called double
