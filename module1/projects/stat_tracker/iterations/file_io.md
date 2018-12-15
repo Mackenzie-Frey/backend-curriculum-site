@@ -21,7 +21,7 @@ Note: we have linked the GitHub repositories for SimpleCov and Rake above, but y
 
 ## File I/O
 
-In order to get data into the system we're going to create, we're going to read information from CSV files. At this point, we don't expect that you have determined exactly what you will be doing with the information that you collect, so for now you may just want to print some information to the terminal about each record you read in.
+In order to get data into the system we're going to create, we're going to read information from CSV files. At this point, we don't expect that you have determined exactly what you will be doing with the information that you collect, so for now you may just want to print some information to the terminal about each record you read in. You may want to consider using [Rubys CSV class](https://ruby-doc.org/stdlib-2.0.0/libdoc/csv/rdoc/CSV.html).
 
 At a high level, if you create a runner file including the code below, you should drop into a pry session with an instance of StatTracker held in the `stat_tracker` variable.
 
